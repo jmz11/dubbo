@@ -122,6 +122,7 @@ public class WrapperTest {
 
     @Test
     public void test_getMethodNames_ContainExtendsParentMethods() throws Exception {
+        System.out.println("test known flaky");
         assertArrayEquals(new String[]{"hello", "world"}, Wrapper.getWrapper(Son.class).getMethodNames());
     }
 
