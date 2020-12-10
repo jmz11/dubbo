@@ -10,6 +10,6 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: ${{ matrix.java }}
+          java-version: 8
       - name: Run NonDex
         run: sh ./nondex.sh
