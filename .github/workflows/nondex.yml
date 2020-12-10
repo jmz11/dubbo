@@ -1,0 +1,15 @@
+name: NonDex
+
+on: [push, pull_request]
+
+jobs:
+  ubuntu-jdk8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: ${{ matrix.java }}
+      - name: Run NonDex
+        run: sh ./nondex.sh
